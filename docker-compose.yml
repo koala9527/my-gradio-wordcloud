@@ -1,0 +1,12 @@
+version: "3.5"
+
+services:
+  my-wordcloud-web:
+    image: my-wordcloud-web:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: my-wordcloud-web
+    restart: always
+    ports:    # 指定端口映射
+      - "5000:5000"
