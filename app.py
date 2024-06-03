@@ -14,7 +14,7 @@ def process(text, filepath, mask_img):
     mask = np.array(im)
 
     # 创建词云
-    wc = wordcloud.WordCloud(font_path = 'simhei.ttf',background_color="black", max_words=2000, mask=mask)
+    wc = wordcloud.WordCloud(font_path = 'simhei.ttf',background_color="white", max_words=2000, mask=mask)
     if len(text) == 0:
         # 打开文件
         # print(filepath)
@@ -49,4 +49,4 @@ with gr.Blocks(css="footer {visibility: hidden}") as demo:
         clear_btn.click(lambda _: (None, None, None, None), inputs=clear_btn, outputs=[text, file, mask, output_image])
 
 
-demo.launch()
+demo.launch(server_name="0.0.0.0")

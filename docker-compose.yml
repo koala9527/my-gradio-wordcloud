@@ -9,4 +9,4 @@ services:
     container_name: my-wordcloud-web
     restart: always
     ports:    # 指定端口映射
-      - "5000:5000"
+      - "5000:7860"
